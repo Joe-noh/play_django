@@ -1,0 +1,8 @@
+<ul>
+  {% for post in posts %}
+    <li>
+      <p>{{ post.content }}</p>
+      <time>{{ post.created_at }}</time>
+    </li>
+  {% endfor %}
+</ul>
