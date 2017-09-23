@@ -1,14 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<ul>
-  {% for post in posts %}
-    <li>
-      <p>{{ post.content }}</p>
-      <time>{{ post.created_at }}</time>
-    </li>
-  {% endfor %}
-</ul>
+  <nav class="nav"><a href="{% url 'new' %}"><button class="button new">New</button></a></nav>
 
-<a href="{% url 'new' %}">New</a>
+  <ul class="ul">
+    {% for post in posts %}
+      <li class="li">
+        <p class="content">{{ post.content }}</p>
+        <time class="time">{{ post.created_at }}</time>
+      </li>
+    {% endfor %}
+  </ul>
 {% endblock %}

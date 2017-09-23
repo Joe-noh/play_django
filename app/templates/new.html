@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<form action="{% url 'new' %}" method="post">
-  {% csrf_token %}
+  <form class="form" action="{% url 'new' %}" method="post">
+    {% csrf_token %}
 
-  <textarea name="content" rows="8" cols="80" required></textarea>
-  <input type="submit" name="post" value="POST">
-</form>
+    <textarea class="textarea" name="content" autofocus required></textarea>
+    <input type="submit" class="button" name="post" value="POST">
+  </form>
 {% endblock %}
